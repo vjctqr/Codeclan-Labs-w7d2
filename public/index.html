@@ -11,10 +11,22 @@
   <div id="app">
     <h1>Countries App</h1>
     <p>Total population of the world is: {{totalPopulation}}</p>
-
-
-    
   </div>
+
+  <div class="form-item">
+    <form v-on:submit.prevent="countrySelected">
+      <label for="name" class="primary">Name:</label>
+      <select>
+        <option disabled value="">Please select a country</option>
+        <option v-for="(country, index) in countries">{{name}}</option>
+      </select>
+      <input type="submit" value="Select Country">
+    </form>
+  </div>
+
+
+
+  
 
 </body>
 </html>
